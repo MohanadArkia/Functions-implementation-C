@@ -2,6 +2,17 @@
 #include <stdbool.h>
 #include <string.h>
 
+
+void reverseString (char str[]) {
+    char reversedStr[100];
+    int j = 0;
+    for (int i = strlen(str) - 1; i >= 0; i--) {
+       reversedStr[j] = str[i]; 
+       j++;
+    }
+    printf("%s\n", reversedStr);
+}
+
 void zFill (char* str, int width, char fill) {
     int strLength = strlen(str); 
     printf("%s", str);
@@ -28,9 +39,13 @@ void repeat (char* str, int repeats, char separator, bool latestSeparator) {
 int main () {
   /* repeat("Hello", 5, ';', true); */
   /* repeat("World", 5, ';', false); */
-  zFill("C", 3, '+');
-  zFill("C", 2, '#');
-  zFill("C", 1, ' ');
+
+  /* zFill("C", 3, '+'); */
+  /* zFill("C", 2, '#'); */
+  /* zFill("C", 1, ' '); */
+
+    char text[] = "This is my reversed string";
+    reverseString(text);
 
   return 0;
 }

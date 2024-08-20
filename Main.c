@@ -2,6 +2,11 @@
 #include <stdbool.h>
 #include <string.h>
 
+void generateAlphabetWithASCII (char start, char end) {
+   for (int i = start; i <= end; i++) {
+       printf("%c | %d\n", i, i);
+   }
+}
 
 void reverseString (char str[]) {
     char reversedStr[100];
@@ -44,8 +49,12 @@ int main () {
   /* zFill("C", 2, '#'); */
   /* zFill("C", 1, ' '); */
 
-    char text[] = "This is my reversed string";
-    reverseString(text);
+  /* char text[] = "This is my reversed string"; */
+  /* reverseString(text); */
+
+  /* generateAlphabetWithASCII('A', 'Z'); */
+  /* generateAlphabetWithASCII('a', 'z'); */
+  /* generateAlphabetWithASCII(' ', '~'); */
 
   return 0;
 }
